@@ -1,0 +1,5 @@
+# A 'prime' directory can be created by the 'snapcraft try' command
+prime
+*.rej
+*.orig
+*~

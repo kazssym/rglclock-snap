@@ -1,0 +1,33 @@
+# snap/snapcraft.yaml
+# Copyright (C) 2019-2021 Kaz Nishimura
+#
+# Copying and distribution of this file, with or without modification, are
+# permitted in any medium without royalty provided the copyright notice and
+# this notice are preserved.  This file is offered as-is, without any warranty.
+---
+name: rglclock
+title: RGLCLock
+version: "3.0.0"
+summary: Simple 3D clock application
+description: |
+  RGLCLock is a simple 3D clock application.
+license: GPL-3.0+
+confinement: strict
+grade: stable
+base: core18
+apps:
+  rglclock:
+    command: rglclock
+    extensions:
+      - gnome-3-28
+    plugs: []
+parts:
+  rglclock:
+    plugin: autotools
+    source: https://bitbucket.org/kazssym/rglclock/downloads/rglclock-3.0.tar.gz
+    source-checksum: sha256/334786c7ed631b43bb147a6eb63f885287badd3938c2b745aaa5b9f114c7aa89
+    build-packages:
+      - libglu1-mesa-dev
+      - libxml2-dev
+    stage-packages:
+      - libglu1-mesa

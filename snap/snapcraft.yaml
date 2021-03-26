@@ -20,13 +20,13 @@ apps:
     command: rglclock
     extensions:
       - gnome-3-28
-    plugs:
-      - dot-rglclock
-plugs:
-  dot-rglclock:
-    interface: personal-files
-    write:
-      - $HOME/.rglclock
+#    plugs:
+#      - dot-rglclock
+#plugs:
+#  dot-rglclock:
+#    interface: personal-files
+#    write:
+#      - $HOME/.rglclock
 parts:
   rglclock:
     plugin: autotools

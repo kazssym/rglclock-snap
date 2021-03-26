@@ -17,7 +17,7 @@ grade: stable
 base: core18
 apps:
   rglclock:
-    command: rglclock
+    command: bin/rglclock
     extensions:
       - gnome-3-28
 #    plugs:
